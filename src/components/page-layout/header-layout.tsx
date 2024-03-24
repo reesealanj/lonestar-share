@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Package2Icon } from "../icon";
+import { DarkModeToggle } from "./dark-mode-toggle";
 
 export function HeaderLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,6 +10,7 @@ export function HeaderLayout({ children }: { children: React.ReactNode }) {
           <Package2Icon className="h-6 w-6" />
           <span className="">Lonestar Share</span>
         </Link>
+        <DarkModeToggle className="ml-auto" />
       </div>
       <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
         {children}
