@@ -6,6 +6,7 @@ import { Input } from "../ui/input";
 
 import { useSearchContext } from "../context/search";
 import { useRouter } from "next/navigation";
+import { encodeSearchQueryForURI } from "@/lib/utils";
 
 export function HeaderSearchBar() {
   const router = useRouter();
@@ -17,7 +18,7 @@ export function HeaderSearchBar() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const encodedUrlQuery = encodeURIComponent(query ?? "");
+    const encodedUrlQuery = encodeSearchQueryForURI(query ?? "");
     router.push(`/drive/search?q=${encodedUrlQuery}`);
   };
 
