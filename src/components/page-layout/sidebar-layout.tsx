@@ -1,14 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
-import {
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-  DropdownMenuItem,
-  DropdownMenuContent,
-  DropdownMenu,
-} from "@/components/ui/dropdown-menu";
-import { HomeIcon, MenuIcon, Package2Icon, UserCircleIcon } from "../icon";
+import { HomeIcon, MenuIcon, Package2Icon } from "../icon";
 import { DarkModeToggle } from "./dark-mode-toggle";
 import { InviteSidebarCTA } from "./sidebar-cta";
 import { MobileSidebarLink, SidebarLink } from "./sidebar-link";
@@ -20,6 +13,7 @@ import {
   FolderIcon,
 } from "lucide-react";
 import { HeaderSearchBar } from "./header-search-bar";
+import { HeaderUserMenu } from "./header-user-menu";
 
 export function SidebarLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -117,30 +111,7 @@ export function SidebarLayout({ children }: { children: React.ReactNode }) {
             </SheetContent>
           </Sheet>
           <HeaderSearchBar />
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="rounded-full" size="icon" variant="secondary">
-                <UserCircleIcon className="h-5 w-5" />
-                <span className="sr-only">Toggle user menu</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <Link href="/settings">
-                <DropdownMenuItem className="cursor-pointer">
-                  Settings
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/support">
-                <DropdownMenuItem className="cursor-pointer">
-                  Support
-                </DropdownMenuItem>
-              </Link>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem className="cursor-pointer">
-                Logout
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <HeaderUserMenu />
           <DarkModeToggle className="rounded-full" />
         </header>
         <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">

@@ -24,7 +24,7 @@ export function ForgotPasswordForm() {
   };
 
   const handleReturnToLogin = () => {
-    router.push("/forgot-password");
+    router.push("/log-in");
   };
 
   return (
