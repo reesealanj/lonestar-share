@@ -140,13 +140,19 @@ export function SidebarLayout({ children }: { children: React.ReactNode }) {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <Link href="/settings">
-                <DropdownMenuItem>Settings</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  Settings
+                </DropdownMenuItem>
               </Link>
               <Link href="/support">
-                <DropdownMenuItem>Support</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  Support
+                </DropdownMenuItem>
               </Link>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                Logout
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <DarkModeToggle className="rounded-full" />
