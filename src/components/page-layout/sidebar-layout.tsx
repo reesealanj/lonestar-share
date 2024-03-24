@@ -1,28 +1,14 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
-import { Input } from "@/components/ui/input";
 import {
   DropdownMenuTrigger,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuItem,
   DropdownMenuContent,
   DropdownMenu,
 } from "@/components/ui/dropdown-menu";
-import {
-  BellIcon,
-  HomeIcon,
-  LineChartIcon,
-  LockIcon,
-  MenuIcon,
-  Package2Icon,
-  PackageIcon,
-  SearchIcon,
-  ShoppingCartIcon,
-  UserCircleIcon,
-  UsersIcon,
-} from "../icon";
+import { HomeIcon, MenuIcon, Package2Icon, UserCircleIcon } from "../icon";
 import { DarkModeToggle } from "./dark-mode-toggle";
 import { InviteSidebarCTA } from "./sidebar-cta";
 import { MobileSidebarLink, SidebarLink } from "./sidebar-link";
